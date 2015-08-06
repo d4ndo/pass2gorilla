@@ -6,7 +6,7 @@
 pwstore="$1"
 stringsize="${#pwstore}" 
 
-echo "uuid,group,title,url,user,password,notes"
+printf '%s\n' "uuid,group,title,url,user,password,notes"
 
 find "$pwstore" -name "*.gpg" | while read line; do
 	line="$(cut -c "$stringsize"- <<< "$line")"
@@ -25,5 +25,5 @@ find "$pwstore" -name "*.gpg" | while read line; do
 	temp="$(sed -n '1!p' <<< "$temp")"
 	notes="$(tr '\n' ' ' <<< "$temp")"
 
-	echo "$uuid","$group","$title","$url","$user","$password","$notes"
+	printf '%s,%s,%s,%s,%s,%s,%s\n' "$uuid" "$group" "$title" "$url" "$user" "$password" "$notes"
 done
