@@ -1,7 +1,9 @@
 # pass2gorilla
-convert the standard unix password manager repository to a password gorilla data file
+Convert a command line password manager repository (pass), to a password-gorilla container file.
 
-This is how to run the script:
+##Getting started:
+
+run the script:
 
 ```bash
 pass2gorilla.sh ./password-store > import.csv
@@ -27,4 +29,4 @@ pass2gorilla is optimised for this data organisation:
 
 Parent dir holding the url. Username containing the password. 
 
-(multiline password) The first line is stored as password. Additional information is stored as note. (multiline password)
+multiline password: The first line is stored as password. Additional information is stored as note.
