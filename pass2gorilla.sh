@@ -4,7 +4,7 @@
 
 
 pwstore="$1"
-stringsize="${#pwstore}" 
+stringsize="${#pwstore}"
 
 printf '%s\n' "uuid,group,title,url,user,password,notes"
 
@@ -12,7 +12,7 @@ find "$pwstore" -name "*.gpg" | while read line; do
 	line="$(cut -c "$stringsize"- <<< "$line")"
 
 	uuid="$(uuidgen)"
-	user="$(sed	-e 's/\(.*\)\/\(.*\)\.gpg/\2/' <<< "$line")"
+	user="$(sed -e 's/\(.*\)\/\(.*\)\.gpg/\2/' <<< "$line")"
 
 	temp="$(sed -e 's/\/*\(.*\)\/.*.gpg/\1/'  -e 's/\//;/g' <<< "$line")"
 	title="$(sed -e 's/.*;\(.*\)/\1/' <<< "$temp")"
