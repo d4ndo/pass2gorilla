@@ -6,7 +6,7 @@ Convert a command line password manager repository (pass), to a password-gorilla
 run the script:
 
 ```bash
-pass2gorilla.sh ./password-store > import.csv
+./pass2gorilla.sh ./password-store > import.csv
 ```
 pass2gorilla is optimised for this data organisation:
 
