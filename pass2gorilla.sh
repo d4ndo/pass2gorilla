@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright (C) 2015 <pcre@gmx.de>. All Rights Reserved.
-# This file is licensed under the GPLv3+. Please see COPYING for more information.
+# This file is licensed under the GPLv3+. Please see LICENSE for more information.
 
 
 pwstore="$1"
