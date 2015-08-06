@@ -8,7 +8,7 @@ run the script:
 ```bash
 ./pass2gorilla.sh ./password-store > import.csv
 ```
-pass2gorilla is optimised for this data organisation:
+pass2gorilla is optimised for this kind of data organisation:
 
 ```bash
 ├── email
