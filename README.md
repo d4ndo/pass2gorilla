@@ -12,7 +12,7 @@ pass2gorilla is optimised for this kind of data organisation:
 
 ```bash
 ├── email
-│   ├── google.de
+│   ├── google.com
 │   │   ├── user1@gmail.com
 │   │   └── spaminside@gmail.com
 │   └── mydomain.com
