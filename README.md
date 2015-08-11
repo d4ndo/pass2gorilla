@@ -6,9 +6,20 @@ Convert a command line password manager repository (pass), to a password-gorilla
 run the script:
 
 ```bash
-./pass2gorilla.sh ./password-store > import.csv
+./pass2gorilla.sh ./password-store > in.csv
 ```
-pass2gorilla is optimised for this kind of data organisation:
+
+Import the ```in.csv``` file with password-gorilla.
+
+Dont forget to delete ```in.csv```:
+
+```bash
+shred -u in.csv
+```
+
+##Organisation 
+
+pass2gorilla.sh is optimised for this kind of data organisation:
 
 ```bash
 ├── email
@@ -33,3 +44,6 @@ pass2gorilla is optimised for this kind of data organisation:
 Parent dir holding the url. Username containing the password. 
 
 multiline password: The first line is stored as password. Additional information is stored as note.
+
+See also
+https://github.com/d4ndo/gorilla2pass
