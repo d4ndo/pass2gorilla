@@ -17,6 +17,25 @@ Dont forget to delete ```in.csv```:
 shred -u in.csv
 ```
 
+##Recommended
+
+ Better do not store any password unencrypted on your hard drive. Use some ramdrive:
+
+
+
+```bash
+sudo mkdir /mnt/ramdisk
+sudo mount -t tmpfs -o size=1m tmpfs /mnt/ramdisk
+./pass2gorilla.sh ./password-store > /mnt/ramdisk/in.csv
+```
+
+After that import the csv file to password-gorilla and delete the csv file:
+
+```bash
+sudo rm /mnt/ramdisk/in.csv
+sudo umount /mnt/ramdisk
+```
+
 ##Organisation 
 
 pass2gorilla.sh is optimised for this kind of data organisation:
