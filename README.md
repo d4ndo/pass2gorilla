@@ -19,7 +19,7 @@ shred -u in.csv
 
 ##Recommended
 
-Do not store any password unencrypted on your hard drive. Use some ramdrive:
+Do not store any password unencrypted on your hard drive. Use some ramdisk:
 
 ```bash
 sudo mkdir /mnt/ramdisk
