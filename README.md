@@ -6,7 +6,8 @@ Convert a command line password manager repository (pass), to a password-gorilla
 run the script:
 
 ```bash
-./pass2gorilla.sh ./password-store > in.csv
+mkfifo in.csv
+./pass2gorilla.sh $HOME/.password-store/ > in.csv
 ```
 
 Import the ```in.csv``` file with password-gorilla.
@@ -14,24 +15,7 @@ Import the ```in.csv``` file with password-gorilla.
 Dont forget to delete ```in.csv```:
 
 ```bash
-shred -u in.csv
-```
-
-##Recommended
-
-Do not store any password unencrypted on your hard drive. Use some ramdisk:
-
-```bash
-sudo mkdir /mnt/ramdisk
-sudo mount -t tmpfs -o size=1m tmpfs /mnt/ramdisk
-./pass2gorilla.sh ./password-store > /mnt/ramdisk/in.csv
-```
-
-Import the csv file to password-gorilla and delete the csv file:
-
-```bash
-sudo rm /mnt/ramdisk/in.csv
-sudo umount /mnt/ramdisk
+rm in.csv
 ```
 
 ##Organisation 
